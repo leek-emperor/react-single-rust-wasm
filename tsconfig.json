@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "declaration": true, // 生成相应的 '.d.ts' 文件
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "ES2015",
+        "esModuleInterop": true,
+        "target": "ES5",
+        "jsx": "react-jsx",
+        "moduleResolution": "node"
+    },
+    "include": ["./web/**/*"],
+    "exclude": ["./node_modules/**/*"]
+}
