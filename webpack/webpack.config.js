@@ -42,6 +42,7 @@ module.exports = {
             crateDirectory: path.resolve(__dirname, '..'),
             outDir: path.resolve(__dirname, '../web/rwasm'), // 输出文件夹路径，默认是'pkg'
             outName: 'index', // 默认文件以index开头
+            extraArgs: '--target web',
         }),
         // Have this example work in Edge which doesn't ship `TextEncoder` or
         // `TextDecoder` at this time. 处理浏览器兼容问题

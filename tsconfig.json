@@ -4,9 +4,9 @@
         "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "ES2015",
+        "module": "esnext",
         "esModuleInterop": true,
-        "target": "ES5",
+        "target": "ES6",
         "jsx": "react-jsx",
         "moduleResolution": "node"
     },

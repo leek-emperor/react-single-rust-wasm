@@ -7,7 +7,7 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert("Hello, react-singe-rust-wasm!");
+    alert("Hello, react-2222singe-rust-wasm!");
 }
 
 #[wasm_bindgen]
