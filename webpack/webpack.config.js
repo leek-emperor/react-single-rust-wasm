@@ -38,7 +38,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin(), // 每次打包清空dist目录
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../web/index.html'), //需要放打包文件的html模板路径
             filename: 'index.html', //打包完成后的这个模板叫什么名字
@@ -56,11 +56,15 @@ module.exports = {
             TextDecoder: ['text-encoding', 'TextDecoder'],
             TextEncoder: ['text-encoding', 'TextEncoder'],
         }),
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({
+            // analyzerMode: 'disabled', // 不启动展示打包报告的http服务器
+            // generateStatsFile: true, // 是否生成stats.json文件
+            openAnalyzer: false, // 不默认打开一个弹窗展示
+        }), // 打包分析插件
         new CompressionPlugin({
             test: /\.(js|css)(\?.*)?$/i, //需要压缩的文件正则
             threshold: 1024, //文件大小大于这个值时启用压缩
-            deleteOriginalAssets: false, //压缩后保留原文件
+            deleteOriginalAssets: true, // 压缩后删除原文件
         }),
     ],
     optimization: {
